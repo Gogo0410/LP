@@ -41,7 +41,7 @@ body {
     align-items: center;
     text-align: center;
     overflow: hidden; 
-    background-image: url('https://lime-fit.com/wp-content/themes/lime-fit_originalwp/assets/images/service/ma02.png');
+    background-image: url('https://lime-fit.com/wp-content/themes/lime-fit_originalwp/assets/images/service/ma02.png'); /* ヒーローセクションの背景画像は固定 */
     background-size: cover; 
     background-position: center top; 
     background-repeat: no-repeat; 
@@ -147,11 +147,17 @@ body {
     text-align: center;
 }
 
-.cta-buttons {
+.cta-buttons { /* ヒーローセクション下部のCTAボタン */
     display: flex;
     justify-content: center;
     gap: 20px; 
     flex-wrap: wrap; 
+    position: absolute; /* .hero-sectionに対してabsolute */
+    bottom: 50px; /* 下からの位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* 最前面 */
+    max-width: 90%; /* スマホでのボタンの最大幅 */
 }
 
 .btn {
@@ -794,6 +800,157 @@ body {
 }
 
 
+/* --- Section 9: 取引事例 --- */
+.transaction-examples-section {
+    background-color: #f8f5f2; /* 薄いベージュ */
+    padding: 80px 0; /* 各カード上下に40px以上の余白を確保するため、セクション全体で80px */
+}
+
+.transaction-examples-section .section-title { /* Section Title の既存スタイルを継承しつつ調整 */
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px; /* 下のカルーセルとの間隔 */
+    line-height: 1.4;
+    padding-bottom: 10px; 
+    position: relative;
+    display: inline-block; 
+    color: #333;
+    letter-spacing: 0.02em; 
+}
+
+.transaction-examples-section .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 中央寄せ */
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 3px; /* 下線の太さ */
+    width: 40px; /* 幅40〜50px程度 */
+    background-color: #e47200; /* オレンジ色の下線 */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* PCでのカルーセルの最大幅 */
+    margin: 0 auto; /* 中央寄せ */
+    overflow: hidden; /* スライドがはみ出さないように */
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* スライドアニメーション */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* 各スライドはコンテナの100%幅を占め、縮まない */
+    width: 100%; /* flex-basisと合わせて明示的に設定 */
+    box-sizing: border-box; /* paddingやborderを含めてwidth計算 */
+    padding: 40px 0; /* カード上下に40px以上の余白 */
+    display: flex; /* カードを中央寄せするためにflexを使用 */
+    justify-content: center;
+    align-items: center;
+}
+
+.case-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 90%; /* スライド内のカードの幅（余白を作る） */
+    max-width: 450px; /* PCでのカードの最大幅 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.case-card-image {
+    width: 100%;
+    height: 200px; /* 画像の高さ固定 */
+    object-fit: cover;
+    display: block;
+    position: relative; /* ラベルの基準 */
+}
+
+.transfer-amount-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e47200; /* オレンジ背景 */
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-bottom-left-radius: 10px; /* 角丸 */
+    z-index: 2; /* 画像より手前に表示 */
+}
+
+.case-card-content {
+    padding: 20px;
+}
+
+.case-card-heading {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.case-card-text {
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.case-card-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白背景 */
+    color: #888; /* 矢印の色 */
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* 大きめの円形 */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* 矢印アイコンのサイズ */
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    z-index: 10;
+    -webkit-appearance: none; /* Safariでのデフォルトスタイルを無効化 */
+    appearance: none;
+    -webkit-tap-highlight-color: transparent; /* モバイルでのタップ時のハイライトを無効化 */
+    outline: none; /* フォーカス時のアウトラインを無効化 */
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* ホバーで不透明に */
+    color: #555;
+}
+
+.carousel-button-prev {
+    left: calc(50% - 300px - 25px); /* .carousel-containerのmax-width:600pxの半分外側 */
+    /* 600px / 2 + 矢印の幅半分 */
+    /* モバイルでは.carousel-containerのmax-widthが適用されないため、別途調整 */
+}
+
+.carousel-button-next {
+    right: calc(50% - 300px - 25px);
+}
+
+
 /* --- Responsive Adjustments (Smartphone View) --- */
 @media (max-width: 768px) {
     /* Hero Section (ファーストビュー) */
@@ -825,9 +982,10 @@ body {
         line-height: 1.5; 
     }
 
-    .cta-buttons {
+    .cta-buttons { /* ヒーローセクション下部のCTAボタン */
         flex-direction: column; 
         gap: 15px; 
+        bottom: 30px; /* モバイルで下からの位置調整 */
     }
 
     .btn {
@@ -1076,6 +1234,57 @@ body {
         font-size: 0.9em;
         line-height: 1.6;
     }
+
+    /* Section 9: 取引事例 */
+    .transaction-examples-section {
+        padding: 60px 0;
+    }
+    .transaction-examples-section .section-title {
+        font-size: 1.8em;
+        margin-bottom: 40px;
+        letter-spacing: normal;
+    }
+    .transaction-examples-section .section-title::after {
+        height: 2px;
+    }
+
+    .carousel-container {
+        max-width: 320px; /* スマホでのカルーセル表示幅（375px幅のLPで中央寄せ） */
+    }
+
+    .carousel-slide {
+        padding: 30px 0; /* スマホでのカード上下余白 */
+    }
+    .case-card {
+        width: 95%; /* スマホでのカードの幅調整 */
+        max-width: none;
+    }
+    .case-card-image {
+        height: 150px; /* スマホでの画像の高さ */
+    }
+    .transfer-amount-label {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    .case-card-heading {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    .case-card-text {
+        font-size: 0.85em;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+
+    /* Navigation Buttons (モバイルでの位置調整) */
+    .carousel-button {
+        width: 40px; /* タップ領域確保のため少し大きく */
+        height: 40px;
+        font-size: 1.2em;
+    }
+    .carousel-button-prev { left: 10px; }
+    .carousel-button-next { right: 10px; }
+
 
     /* Section 8: CTA Section */
     .cta-section {
