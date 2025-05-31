@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>競合LP - 不動産M&A</title>
+    <!-- Google Fonts (Zen Kaku Gothic New) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons (最新版CDNを使用) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <!-- Section 1: Hero Section (ファーストビュー) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    不動産会社専門のM&A・事業承継仲介サービス
+                </p>
+                <h1 class="hero-title">
+                    経営不振のお悩み<br> 
+                    <span class="highlight">M&A・事業承継</span><br> 
+                    で解決できます
+                </h1>
+
+                <div class="feature-boxes">
+                    <div class="feature-item">
+                        <p>中小規模の<br>不動産会社専門</p>
+                    </div>
+                    <div class="feature-item">
+                        <p>売り手様手数料<br>¥0〜</p>
+                    </div>
+                    <div class="feature-item">
+                        <p>中小企業庁<br>M&A登録支援機関</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn contact-btn">
+                        <i class="fa-solid fa-envelope"></i> お問い合わせ
+                    </a>
+                    <a href="#" class="btn call-btn"> 
+                        <i class="fa-solid fa-phone"></i> 
+                        <div class="call-info"> 
+                            <span class="call-text">電話でご相談</span>
+                            <span class="phone-number">03-6258-5203</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Page Navigation (Table of Contents) -->
+        <nav class="page-navigation">
+            <ul class="nav-list">
+                <!-- ナビゲーションの順序をコンテンツに合わせて変更 -->
+                <li class="nav-item">
+                    <a href="#problem-section">
+                        ReBMAが選ばれる理由
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-ma-section">
+                        M&Aとは
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#merit-section">
+                        M&A・事業承継のメリット
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reason-resma">
+                        選ばれる理由
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#flow-section">
+                        ご利用の流れ
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq-section">
+                        よくある質問
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Section 3: Problem Section (お悩みリスト) -->
+        <section id="problem-section" class="problem-section">
+            <div class="container">
+                <h2 class="section-title">
+                    不動産会社の経営で<br>
+                    このようなことにお悩みではないですか？
+                </h2>
+
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <i class="fa-solid fa-chart-line-down problem-icon"></i> 
+                        <p class="problem-text">資金繰りが悪化して<span class="highlight-orange">借入</span>がある...</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-sack-dollar problem-icon"></i> 
+                        <p class="problem-text">撤退したいが、<span class="highlight-orange">廃業のコスト</span>が高い...</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-users problem-icon"></i> 
+                        <p class="problem-text">利益が下がり、従業員への<span class="highlight-orange">給与支払い</span>が苦しい...</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-chart-column problem-icon"></i> 
+                        <p class="problem-text">売り上げが落ちてきて<span class="highlight-orange">先行き</span>が見通せない...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Solution Intro Section (M&A・事業承継なら) -->
+        <section class="solution-intro-section">
+            <div class="container">
+                <h2 class="solution-intro-title">
+                    <span class="line-with-underline">M&A・事業承継なら</span><br>
+                    <span class="line-with-underline">これらのお悩みが解決できます</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Section 5: About M&A Section (そもそもM&Aとは) -->
+        <section id="about-ma-section" class="about-ma-section">
+            <div class="container">
+                <h2 class="about-ma-title">
+                    そもそも<span class="highlight-ma">M&A</span>とは
+                </h2>
+                <p class="about-ma-description">
+                    M&Aとは、『Mergers(<span class="highlight-orange-text">合併</span>) and Acquisitions(<span class="highlight-orange-text">買収</span>)』の略称で、<br class="pc-only">
+                    <span class="highlight-orange-text">企業の合併・買収</span>を指します。<br>
+                    売り手様は<span class="highlight-orange-text">会社や不動産事業を譲渡</span>することによって、<br class="pc-only">
+                    買い手様から<span class="highlight-orange-text">譲渡金</span>を受け取ることが可能です。
+                </p>
+
+                <div class="ma-flow-box-image-container">
+                    <div class="flow-title-bar">M&Aの仕組み</div>
+                    <!-- M&Aの仕組み図を画像として表示 -->
+                    <img src="https://via.placeholder.com/600x400/F8F8F8/333333?text=M%26A%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E5%9B%B3%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E8%BF%BD%E5%8A%A0" alt="M&Aの仕組み図" class="ma-flow-image">
+                    <!-- ↑ 画像リンクは適宜変更してください -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: M&A・事業承継のメリット -->
+        <section id="merit-section" class="merit-section">
+            <div class="merit-title-area">
+                <h2 class="section-title-alt">M&A・事業承継のメリット</h2>
+            </div>
+            <div class="container">
+                <ul class="merit-list">
+                    <li class="merit-item">
+                        <p class="merit-number">01</p>
+                        <div class="merit-content">
+                            <h3 class="merit-heading">倒産・廃業の費用がかからないから</h3>
+                            <p class="merit-description">
+                                会社を倒産させたり、事業撤退を行うことにも、<span class="highlight-orange-text">時間と費用</span>がかかります。手続きで約50万円、店舗の什器撤去、原状回復でも約50万円〜100万円かかり、そのための時間や工数を考えると、決して安くはありません。売却することは、その<span class="highlight-orange-text">費用を省く</span>ことにもつながります。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="merit-item">
+                        <p class="merit-number">02</p>
+                        <div class="merit-content">
+                            <h3 class="merit-heading">顧客、従業員、契約関係を引き継げる</h3>
+                            <p class="merit-description">
+                                株式譲渡の場合、<span class="highlight-orange-text">契約関係や免許等</span>を全て<span class="highlight-orange-text">引き継ぐ</span>ことができます。倒産・廃業をすることなく、<span class="highlight-orange-text">従業員の雇用</span>も継続することができ、不安にさせることなく引き続き勤務してもらうことが可能です。契約関係も解約手続きなどを行う必要がなくなるため、<span class="highlight-orange-text">工数の削減</span>にもつながります。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="merit-item">
+                        <p class="merit-number">03</p>
+                        <div class="merit-content">
+                            <h3 class="merit-heading">借入などの負担から解放される</h3>
+                            <p class="merit-description">
+                                株式譲渡の場合、資産や各種契約関係に加えて<span class="highlight-orange-text">負債も引き継ぐ</span>ことができます。会社の譲渡に伴って<span class="highlight-orange-text">借入や連帯保証人などの負担から解放</span>されるので、心配なく次のステップに進み、新たなキャリアを実現できます。<br>※事前に金融機関との相談が必要な場合もあります。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 7: ReSMAが選ばれる理由 -->
+        <section id="reason-resma" class="reason-resma-section">
+            <div class="resma-reason-title-area">
+                <h2 class="section-title-alt">ReSMAが選ばれる理由</h2>
+            </div>
+
+            <div class="container">
+                <!-- 3つの特徴アイコンブロック -->
+                <div class="reason-icons-grid">
+                    <div class="reason-icon-item">
+                        <i class="fa-solid fa-yen-sign reason-icon"></i>
+                        <p class="reason-label">業界最安値の利用料</p>
+                        <i class="fa-solid fa-chevron-down reason-arrow"></i>
+                    </div>
+                    <div class="reason-icon-item">
+                        <i class="fa-solid fa-calendar-days reason-icon"></i>
+                        <p class="reason-label">最短1ヶ月で譲渡</p>
+                        <i class="fa-solid fa-chevron-down reason-arrow"></i>
+                    </div>
+                    <div class="reason-icon-item">
+                        <i class="fa-solid fa-handshake reason-icon"></i>
+                        <p class="reason-label">高い売却実現性</p>
+                        <i class="fa-solid fa-chevron-down reason-arrow"></i>
+                    </div>
+                </div>
+
+                <!-- 各特徴の詳細カード -->
+                <div class="reason-detail-cards">
+                    <div class="reason-card">
+                        <div class="reason-card-number-tag">01</div>
+                        <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=01+%E6%A5%AD%E7%95%8C%E6%9C%80%E5%AE%89%E5%80%A4%E3%81%AE%E5%88%A9%E7%94%A8%E6%96%99" alt="業界最安値の利用料" class="reason-card-image">
+                        <div class="reason-card-content">
+                            <h3 class="reason-card-heading">業界最安値の利用料</h3>
+                            <p class="reason-card-description">
+                                ReSMAは、<span class="highlight-orange-text">業界最安値の手数料設定</span>になっています。さらに譲渡金200万円以下の案件は<span class="highlight-orange-text">手数料無料</span>でご利用いただけます。弊社が持つ買い手ネットワークを用いて、高値での売却を実現し、手数料を最小限に抑えることで、売り手様の<span class="highlight-orange-text">手残り金額を最大化</span>しています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reason-card">
+                        <div class="reason-card-number-tag">02</div>
+                        <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=02+%E6%9C%80%E7%9F%AD1%E3%83%B6%E6%9C%88%E3%81%A7%E8%AD%B2%E6%B8%A1" alt="最短1ヶ月で譲渡" class="reason-card-image">
+                        <div class="reason-card-content">
+                            <h3 class="reason-card-heading">最短1ヶ月で譲渡</h3>
+                            <p class="reason-card-description">
+                                ReSMAは<span class="highlight-orange-text">不動産会社のみ</span>を扱うM&A・事業承継仲介サービスです。<span class="highlight-orange-text">不動産会社ならではの要点</span>を押さえることで、トラブルを起こすことなく、スムーズな売却を実現します。また、不動産会社を買収したい候補者様が多く集まるネットワークを利用することで、<span class="highlight-orange-text">実現可能性</span>を高めています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reason-card">
+                        <div class="reason-card-number-tag">03</div>
+                        <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=03+%E9%AB%98%E3%81%84%E5%A3%B2%E5%8D%B4%E5%AE%9F%E7%8F%BE%E6%80%A7" alt="高い売却実現性" class="reason-card-image">
+                        <div class="reason-card-content">
+                            <h3 class="reason-card-heading">高い売却実現性</h3>
+                            <p class="reason-card-description">
+                                不動産業に特化したM&A仲介サービスを続けてきた中で、<span class="highlight-orange-text">不動産業者の買収ニーズが高い買い手のネットワーク</span>を構築してきました。各候補者のニーズを押さえていることで、マッチした案件をすぐにご紹介することができ、<span class="highlight-orange-text">成約率は30%超</span>と高い水準を保っています（業界平均約10〜15%）。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: CTA Section (まずはお気軽に無料相談から) -->
+        <section id="cta-section" class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">まずはお気軽に無料相談から</h2>
+                <div class="cta-boxes">
+                    <div class="cta-box">
+                        <div class="cta-box-icon-wrap">
+                            <i class="fa-solid fa-envelope cta-box-icon"></i>
+                            <p class="cta-box-title">お問い合わせ</p>
+                        </div>
+                        <a href="#form-link" class="cta-box-button">
+                            お問い合わせフォームへ <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="cta-box">
+                        <div class="cta-box-icon-wrap">
+                            <i class="fa-solid fa-phone cta-box-icon"></i>
+                            <p class="cta-box-title">お電話でのご相談</p>
+                        </div>
+                        <a href="tel:0362585203" class="cta-box-button">
+                            03-6258-5203 <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
