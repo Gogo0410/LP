@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons (最新版CDNを使用) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper CSS (今回は使用しませんが、CDNを残しておく場合) -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -79,6 +81,12 @@
                 <li class="nav-item">
                     <a href="#reason-resma">
                         選ばれる理由
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#transaction-examples"> <!-- 新しい取引事例セクションへのリンク -->
+                        取引事例
                         <i class="fa-solid fa-chevron-down nav-arrow"></i>
                     </a>
                 </li>
@@ -286,7 +294,121 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section 9: 取引事例 -->
+        <section id="transaction-examples" class="transaction-examples-section">
+            <div class="container">
+                <h2 class="section-title transaction-title">取引事例</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="case-card">
+                                <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=事例1+画像" alt="取引事例1" class="case-card-image">
+                                <span class="transfer-amount-label">譲渡金 200万円</span>
+                                <div class="case-card-content">
+                                    <h3 class="case-card-heading">“廃業予定だった不動産仲介会社を円満譲渡”</h3>
+                                    <p class="case-card-text">A社は個人経営の不動産仲介会社でしたが、近年は取引が少なく廃業を検討していました。</p>
+                                    <p class="case-card-text">しかし、廃業には多額の費用がかかることが判明し、当社のM&Aサポートを利用。</p>
+                                    <p class="case-card-text">結果として、同業への引継ぎが成立し、200万円で売却が成立しました。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="case-card">
+                                <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=事例2+画像" alt="取引事例2" class="case-card-image">
+                                <span class="transfer-amount-label">譲渡金 350万円</span>
+                                <div class="case-card-content">
+                                    <h3 class="case-card-heading">“地方密着企業が都市圏進出の足がかりに”</h3>
+                                    <p class="case-card-text">B社は地方で不動産管理を行っていた企業。都市部に拠点を持ちたいと考え、</p>
+                                    <p class="case-card-text">当社ネットワークで買い手とマッチング。既存拠点の引継ぎでシームレスに進出できました。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="case-card">
+                                <img src="https://via.placeholder.com/600x300/F8F8F8/333333?text=事例3+画像" alt="取引事例3" class="case-card-image">
+                                <span class="transfer-amount-label">譲渡金 500万円</span>
+                                <div class="case-card-content">
+                                    <h3 class="case-card-heading">“赤字でも評価された「営業権」で譲渡成功”</h3>
+                                    <p class="case-card-text">C社は一時赤字で営業停止寸前でしたが、地域での顧客基盤とノウハウを評価され、</p>
+                                    <p class="case-card-text">後継企業が営業権ごと譲受。結果として500万円で譲渡が成立しました。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <button class="carousel-button carousel-button-prev">◀︎</button>
+                    <button class="carousel-button carousel-button-next">▶︎</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- ネイティブJSでのカルーセル制御 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            const carouselSlides = document.querySelectorAll('.carousel-slide');
+            const prevButton = document.querySelector('.carousel-button-prev');
+            const nextButton = document.querySelector('.carousel-button-next');
+
+            let currentIndex = 0;
+            const totalSlides = carouselSlides.length;
+
+            function updateCarousel() {
+                // wrapperのtransformを更新してスライド
+                carouselWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+                // ボタンの表示/非表示（または無効化）
+                // opacityとpointer-eventsで無効化することで、見た目を維持しつつ操作不能にする
+                if (prevButton) {
+                    if (currentIndex === 0) {
+                        prevButton.style.opacity = '0';
+                        prevButton.style.pointerEvents = 'none'; // クリックイベントを無効化
+                    } else {
+                        prevButton.style.opacity = '1';
+                        prevButton.style.pointerEvents = 'auto'; // クリックイベントを有効化
+                    }
+                }
+
+                if (nextButton) {
+                    if (currentIndex === totalSlides - 1) {
+                        nextButton.style.opacity = '0';
+                        nextButton.style.pointerEvents = 'none';
+                    } else {
+                        nextButton.style.opacity = '1';
+                        nextButton.style.pointerEvents = 'auto';
+                    }
+                }
+            }
+
+            // Prevボタンのイベントリスナー
+            if (prevButton) {
+                prevButton.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateCarousel();
+                    }
+                });
+            }
+
+            // Nextボタンのイベントリスナー
+            if (nextButton) {
+                nextButton.addEventListener('click', function () {
+                    if (currentIndex < totalSlides - 1) {
+                        currentIndex++;
+                        updateCarousel();
+                    }
+                });
+            }
+
+            // ページロード時の初期状態を設定
+            updateCarousel();
+        });
+    </script>
 
 </body>
 </html>
