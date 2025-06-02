@@ -10,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons (最新版CDNを使用) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Swiper CSS (今回は使用しませんが、CDNを残しておく場合) -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,45 +19,63 @@
         <section class="hero-section">
             <div class="hero-content">
                 <p class="hero-subtitle">
-                    不動産会社専門のM&A・事業承継仲介サービス
+                    美容・飲食・フィットネスなど<br>
+                    個人店舗オーナー向け M&A支援サービス
                 </p>
                 <h1 class="hero-title">
-                    経営不振のお悩み<br> 
-                    <span class="highlight">M&A・事業承継</span><br> 
-                    で解決できます
+                    その店舗、まだ売れます。<br> 
+                    <span class="highlight-ma-big">M&A事業継承が</span><br> 
+                    解決します。
                 </h1>
 
                 <div class="feature-boxes">
                     <div class="feature-item">
-                        <p>中小規模の<br>不動産会社専門</p>
+                        <p>赤字でも<br>売却可能な場合も</p>
                     </div>
                     <div class="feature-item">
-                        <p>売り手様手数料<br>¥0〜</p>
+                        <p>スタッフごと<br>譲渡可能</p>
                     </div>
                     <div class="feature-item">
-                        <p>中小企業庁<br>M&A登録支援機関</p>
+                        <p>まずは<br>話だけでもOK</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="cta-buttons">
-                    <a href="#" class="btn contact-btn">
-                        <i class="fa-solid fa-envelope"></i> お問い合わせ
-                    </a>
-                    <a href="#" class="btn call-btn"> 
-                        <i class="fa-solid fa-phone"></i> 
-                        <div class="call-info"> 
-                            <span class="call-text">電話でご相談</span>
-                            <span class="phone-number">03-6258-5203</span>
-                        </div>
-                    </a>
-                </div>
+            <div class="cta-buttons">
+                <a href="#cta-section" class="btn contact-btn">
+                    <i class="fa-solid fa-envelope"></i> お問い合わせ
+                </a>
+                <a href="tel:0362585203" class="btn call-btn"> 
+                    <i class="fa-solid fa-phone"></i> 
+                    <div class="call-info"> 
+                        <span class="call-text">電話でご相談</span>
+                        <span class="phone-number">03-6258-5203</span>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- Section 2: Page Navigation (Table of Contents) -->
-        <nav class="page-navigation">
+        <!-- Mobile Accordion Menu (スマホのみ表示) -->
+        <!-- 配置場所をhero-sectionとproblem-sectionの間に移動 -->
+        <div class="mobile-accordion-nav sp-only">
+            <button id="accordionMenuToggle" class="accordion-toggle-button">
+                メニューを見る <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+            </button>
+            <div id="accordionMenuContent" class="accordion-content">
+                <ul class="accordion-list">
+                    <li class="accordion-item"><a href="#about-ma-section">M&Aとは</a></li>
+                    <li class="accordion-item"><a href="#merit-section">M&A・事業承継のメリット</a></li>
+                    <li class="accordion-item"><a href="#reason-resma">選ばれる理由</a></li>
+                    <li class="accordion-item"><a href="#transaction-examples">取引事例</a></li>
+                    <li class="accordion-item"><a href="#flow-section">ご利用の流れ</a></li>
+                    <li class="accordion-item"><a href="#faq-section">よくある質問</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Section 2: Page Navigation (Table of Contents) (PCのみ表示) -->
+        <nav class="page-navigation pc-only">
             <ul class="nav-list">
-                <!-- ナビゲーションの順序をコンテンツに合わせて変更 -->
                 <li class="nav-item">
                     <a href="#problem-section">
                         ReBMAが選ばれる理由
@@ -85,7 +101,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#transaction-examples"> <!-- 新しい取引事例セクションへのリンク -->
+                    <a href="#transaction-examples">
                         取引事例
                         <i class="fa-solid fa-chevron-down nav-arrow"></i>
                     </a>
@@ -108,27 +124,31 @@
         <!-- Section 3: Problem Section (お悩みリスト) -->
         <section id="problem-section" class="problem-section">
             <div class="container">
+                <!-- セクションタイトル変更 -->
                 <h2 class="section-title">
-                    不動産会社の経営で<br>
-                    このようなことにお悩みではないですか？
+                    店舗経営、“モヤモヤ”ありませんか？
                 </h2>
 
                 <div class="problem-list">
+                    <!-- 項目1変更 -->
                     <div class="problem-item">
-                        <i class="fa-solid fa-chart-line-down problem-icon"></i> 
-                        <p class="problem-text">資金繰りが悪化して<span class="highlight-orange">借入</span>がある...</p>
+                        <i class="fa-solid fa-calculator problem-icon"></i> 
+                        <p class="problem-text">利益は出ていないけど、撤退までは考えていない…</p>
                     </div>
+                    <!-- 項目2変更 -->
                     <div class="problem-item">
-                        <i class="fa-solid fa-sack-dollar problem-icon"></i> 
-                        <p class="problem-text">撤退したいが、<span class="highlight-orange">廃業のコスト</span>が高い...</p>
+                        <i class="fa-solid fa-door-open problem-icon"></i> 
+                        <p class="problem-text">お店は回っているけど、現場にはほぼ出ていない…</p>
                     </div>
+                    <!-- 項目3変更 -->
                     <div class="problem-item">
                         <i class="fa-solid fa-users problem-icon"></i> 
-                        <p class="problem-text">利益が下がり、従業員への<span class="highlight-orange">給与支払い</span>が苦しい...</p>
+                        <p class="problem-text">従業員の頑張りに支えられてるけど、人件費がじわじわ重い…</p>
                     </div>
+                    <!-- 項目4変更 -->
                     <div class="problem-item">
-                        <i class="fa-solid fa-chart-column problem-icon"></i> 
-                        <p class="problem-text">売り上げが落ちてきて<span class="highlight-orange">先行き</span>が見通せない...</p>
+                        <i class="fa-solid fa-circle-question problem-icon"></i> 
+                        <p class="problem-text">改善したい気持ちはあるけど、何から手をつければいいか分からない…</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +180,8 @@
                 <div class="ma-flow-box-image-container">
                     <div class="flow-title-bar">M&Aの仕組み</div>
                     <!-- M&Aの仕組み図を画像として表示 -->
-                    <img src="https://via.placeholder.com/600x400/F8F8F8/333333?text=M%26A%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E5%9B%B3%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E8%BF%BD%E5%8A%A0" alt="M&Aの仕組み図" class="ma-flow-image">
+                    <img src="https://github.com/Gogo0410/LP/blob/main/%E6%AE%B5%E8%90%BD%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88.pdf
+">
                     <!-- ↑ 画像リンクは適宜変更してください -->
                 </div>
             </div>
@@ -345,11 +366,155 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section 10: ご利用の流れ -->
+        <section id="flow-section" class="flow-section">
+            <div class="flow-title-area">
+                <h2 class="section-title-alt">ご利用の流れ</h2>
+            </div>
+            <div class="container flow-container">
+                <!-- Step 1: お問い合わせ -->
+                <div class="flow-step">
+                    <div class="flow-step-icon-wrap">
+                        <i class="fa-solid fa-envelope flow-step-icon"></i>
+                    </div>
+                    <div class="flow-step-content">
+                        <h3 class="flow-step-title">お問い合わせ</h3>
+                        <p class="flow-step-description">ページ内の無料相談フォームに必要事項をご入力の上、送信いただくか、お電話にて直接お問い合わせください。</p>
+                    </div>
+                </div>
+                <div class="flow-arrow-down">▼</div>
+
+                <!-- Step 2: ヒアリング・簡易査定 -->
+                <div class="flow-step">
+                    <div class="flow-step-icon-wrap">
+                        <i class="fa-solid fa-file-pen flow-step-icon"></i>
+                    </div>
+                    <div class="flow-step-content">
+                        <h3 class="flow-step-title">ヒアリング・簡易査定</h3>
+                        <p class="flow-step-description">お問い合わせ経緯やご希望・経営状況などをヒアリングの上、今後の進め方についてご案内いたします。</p>
+                    </div>
+                </div>
+                <div class="flow-arrow-down">▼</div>
+
+                <!-- Step 3: アドバイザリー契約 -->
+                <div class="flow-step">
+                    <div class="flow-step-icon-wrap">
+                        <i class="fa-solid fa-headset flow-step-icon"></i>
+                    </div>
+                    <div class="flow-step-content">
+                        <h3 class="flow-step-title">アドバイザリー契約</h3>
+                        <p class="flow-step-description">売却の開始にあたり、弊社とアドバイザリー契約を締結します。契約締結において費用はかかりません。</p>
+                    </div>
+                </div>
+                <div class="flow-arrow-down">▼</div>
+
+                <!-- Step 4: 募集開始 -->
+                <div class="flow-step">
+                    <div class="flow-step-icon-wrap">
+                        <i class="fa-solid fa-laptop flow-step-icon"></i>
+                    </div>
+                    <div class="flow-step-content">
+                        <h3 class="flow-step-title">募集開始</h3>
+                        <p class="flow-step-description">御社専門のチーム、およびアドバイザーが担当し、募集を開始いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: よくある質問 (FAQ) -->
+        <section id="faq-section" class="faq-section">
+            <div class="container">
+                <!-- セクション見出しのテキスト変更 -->
+                <h2 class="section-title faq-title">よくある質問</h2>
+
+                <!-- Q1 -->
+                <div class="faq-item">
+                    <div class="faq-q-box">
+                        <p class="faq-q-text">Q. 費用はかかりますか？</p>
+                    </div>
+                    <div class="faq-a-box">
+                        <p class="faq-a-text">売り手様に関しては、譲渡金200万円までは手数料無料でご利用いただけます。手数料は譲渡金によって異なりますので、詳細は事務局までお問い合わせください。</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <div class="faq-q-box">
+                        <p class="faq-q-text">Q. 営業赤字、債務超過などの経営・財務状態でも売却できますか？</p>
+                    </div>
+                    <div class="faq-a-box">
+                        <p class="faq-a-text">上記のような経営・財務状態でも売却は可能です。宅地建物取引業者の免許があること、管理物件があること、宅建士がいることなどを評価し、買収を検討している方も多くいます。<br>その他にも、売却に関して懸念点がある場合、まずはお気軽に弊社アドバイザーにご相談ください。</p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <div class="faq-q-box">
+                        <p class="faq-q-text">Q. 管理・元付物件もなく、宅建士がいなくても売却できますか？</p>
+                    </div>
+                    <div class="faq-a-box">
+                        <p class="faq-a-text">可能です。実際に管理・元付物件をもたない会社様のご紹介に実績もございます。<br>また、買い手様ご自身が宅建士資格を所持しているケースもございますので、どのような状態でも一度ご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: LP最下部 無料相談CTA + 公式HP案内 -->
+        <section id="final-cta-section" class="final-cta-section">
+            <div class="final-cta-main-block">
+                <div class="container">
+                    <!-- 吹き出しフレーズ -->
+                    <div class="thought-bubbles">
+                        <span class="bubble">「負債があるから売れると思えない」</span>
+                        <span class="bubble">「自分の会社の価値を知りたい」</span>
+                    </div>
+                    <!-- メインタイトル -->
+                    <h2 class="final-cta-title">不安や疑問も、<br>まずは無料でご相談ください</h2>
+
+                    <!-- ボタンブロック：2段構成 -->
+                    <div class="final-cta-boxes">
+                        <div class="final-cta-box">
+                            <div class="final-cta-box-icon-wrap">
+                                <i class="fa-solid fa-envelope final-cta-box-icon"></i>
+                                <p class="final-cta-box-title">お問い合わせ</p>
+                            </div>
+                            <a href="#form-link" class="final-cta-box-button">
+                                お問い合わせフォームへ <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="final-cta-box">
+                            <div class="final-cta-box-icon-wrap">
+                                <i class="fa-solid fa-phone final-cta-box-icon"></i>
+                                <p class="final-cta-box-title">お電話でのご相談</p>
+                            </div>
+                            <a href="tel:0362585203" class="final-cta-box-button">
+                                03-6258-5203 <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ReSMA公式HP案内ブロック -->
+            <div class="resma-hp-section">
+                <div class="container">
+                    <h3 class="resma-hp-title">もっとReSMAを知りたい方へ</h3>
+                    <div class="resma-hp-card">
+                        <img src="https://via.placeholder.com/80x80/FFFFFF/000000?text=Logo" alt="ReSMA Logo" class="resma-hp-logo">
+                        <a href="https://res-ma.com/" class="resma-hp-link">
+                            ReSMA 公式HPへ <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- ネイティブJSでのカルーセル制御 -->
+    <!-- ネイティブJSでのカルーセル制御とアコーディオンメニュー制御 -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // --- カルーセル制御 ---
             const carouselWrapper = document.querySelector('.carousel-wrapper');
             const carouselSlides = document.querySelectorAll('.carousel-slide');
             const prevButton = document.querySelector('.carousel-button-prev');
@@ -359,18 +524,17 @@
             const totalSlides = carouselSlides.length;
 
             function updateCarousel() {
-                // wrapperのtransformを更新してスライド
+                if (!carouselWrapper || carouselSlides.length === 0) return;
+
                 carouselWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
 
-                // ボタンの表示/非表示（または無効化）
-                // opacityとpointer-eventsで無効化することで、見た目を維持しつつ操作不能にする
                 if (prevButton) {
                     if (currentIndex === 0) {
                         prevButton.style.opacity = '0';
-                        prevButton.style.pointerEvents = 'none'; // クリックイベントを無効化
+                        prevButton.style.pointerEvents = 'none'; 
                     } else {
                         prevButton.style.opacity = '1';
-                        prevButton.style.pointerEvents = 'auto'; // クリックイベントを有効化
+                        prevButton.style.pointerEvents = 'auto'; 
                     }
                 }
 
@@ -380,12 +544,11 @@
                         nextButton.style.pointerEvents = 'none';
                     } else {
                         nextButton.style.opacity = '1';
-                        nextButton.style.pointerEvents = 'auto';
+                        nextButton.style.pointerEvents = 'auto'; 
                     }
                 }
             }
 
-            // Prevボタンのイベントリスナー
             if (prevButton) {
                 prevButton.addEventListener('click', function () {
                     if (currentIndex > 0) {
@@ -395,7 +558,6 @@
                 });
             }
 
-            // Nextボタンのイベントリスナー
             if (nextButton) {
                 nextButton.addEventListener('click', function () {
                     if (currentIndex < totalSlides - 1) {
@@ -405,8 +567,108 @@
                 });
             }
 
-            // ページロード時の初期状態を設定
-            updateCarousel();
+            updateCarousel(); // Initialize carousel state
+
+            // --- アコーディオンメニュー制御 ---
+            const accordionMenuToggle = document.getElementById('accordionMenuToggle');
+            const accordionMenuContent = document.getElementById('accordionMenuContent');
+            const accordionArrow = accordionMenuToggle ? accordionMenuToggle.querySelector('.accordion-arrow') : null;
+            const accordionLinks = accordionMenuContent ? accordionMenuContent.querySelectorAll('a') : null;
+
+            let isMenuOpen = false;
+            let isAnimating = false; // 連打防止フラグ
+
+            const ACCORDION_ANIMATION_DURATION = 300; // アニメーション時間 (ms)
+            const SCROLL_OFFSET = 100; // スクロール時の上部余白 (px) - 調整
+
+            // アコーディオンを開く関数
+            function openAccordionMenu() {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                // max-heightをscrollHeightに設定し、アニメーションさせる
+                // ここでscrollHeightを正確に取得するために、要素がdisplay:noneでないことを確認
+                // ただし、このアコーディオンはoverflow:hiddenとopacity:0で非表示なので問題ない
+                accordionMenuContent.style.maxHeight = accordionMenuContent.scrollHeight + 'px';
+                accordionMenuContent.style.opacity = '1';
+                accordionMenuContent.style.pointerEvents = 'auto'; // クリック可能に
+
+                if (accordionArrow) {
+                    accordionArrow.style.transform = 'rotate(180deg)';
+                }
+                isMenuOpen = true;
+
+                // アニメーション終了後にisAnimatingフラグを解除
+                setTimeout(() => {
+                    isAnimating = false;
+                    // アニメーション完了後にmaxHeightをautoにすることで、コンテンツの変化に対応
+                    // ただし、これを行うとスムーズな閉じのアニメーションが困難になるため、通常は行わない
+                    // 今回はコンテンツが固定なので、scrollHeightで十分
+                }, ACCORDION_ANIMATION_DURATION);
+            }
+
+            // アコーディオンを閉じる関数
+            function closeAccordionMenu() {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                accordionMenuContent.style.maxHeight = '0';
+                accordionMenuContent.style.opacity = '0';
+                accordionMenuContent.style.pointerEvents = 'none'; // クリック無効に
+
+                if (accordionArrow) {
+                    accordionArrow.style.transform = 'rotate(0deg)';
+                }
+                isMenuOpen = false;
+
+                // アニメーション終了後にisAnimatingフラグを解除
+                setTimeout(() => {
+                    isAnimating = false;
+                }, ACCORDION_ANIMATION_DURATION);
+            }
+
+            // トグルボタンのイベントリスナー
+            if (accordionMenuToggle) {
+                accordionMenuToggle.addEventListener('click', function () {
+                    if (isMenuOpen) {
+                        closeAccordionMenu();
+                    } else {
+                        openAccordionMenu();
+                    }
+                });
+            }
+
+            // アコーディオン内のリンククリックイベントリスナー
+            if (accordionLinks) {
+                accordionLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault(); // デフォルトのアンカーリンクジャンプを防止
+
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            // スクロール位置を計算（上部オフセットを考慮）
+                            // targetElement.getBoundingClientRect().top はビューポートからの相対位置
+                            // window.pageYOffset は現在のスクロール位置
+                            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                            const targetTopInViewport = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = currentScrollTop + targetTopInViewport - SCROLL_OFFSET;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+
+                            // スクロール後にアコーディオンを閉じる
+                            // スクロールアニメーションの時間に合わせてsetTimeoutを調整
+                            setTimeout(() => {
+                                closeAccordionMenu();
+                            }, 500); // 必要に応じて調整してください。
+                        }
+                    });
+                });
+            }
         });
     </script>
 
